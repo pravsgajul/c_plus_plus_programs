@@ -6,7 +6,7 @@
         "${workspaceFolder}/**",
         "C:\\Program Files (x86)\\Dev-Cpp\\MinGW64/**"
       ],
-      "compilerPath": "gcc",
+      "compilerPath": "",
       "cStandard": "${default}",
       "cppStandard": "${default}",
       "intelliSenseMode": "windows-gcc-x64",
