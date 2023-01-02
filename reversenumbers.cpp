@@ -14,7 +14,7 @@ int main(){
 	
     for (int i=m-1;i>=0;i--){
     	char a=  *char_arr[i];
-    	cout<<a<<endl;
+    	cout<<a;
     //	cout<<char_arr[i];
 	}
      
