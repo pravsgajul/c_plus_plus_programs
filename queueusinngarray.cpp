@@ -1,11 +1,7 @@
 #include<iostream>
-#include<string.h>
+#include<string>
 using namespace std;
 #define n 100
-
-stringtochar(string x){
-	
-}
 
 bool ascii(char x){
 	
@@ -36,26 +32,29 @@ class queue{
 			rear=-1;
 		}
 	
-	void enqueue(char x){
-		if(ascii(x)==1){
-			if(front==-1 && rear==-1){
-				front++;
-				rear++;
-				arr[front]=x;
-				return;
-			}
-			
-			if (rear==n-1){
-				cout<<"Queue is full"<<endl;
-				return;
-			}
-			
-			rear++;
-			arr[rear]=x;
+	void enqueue(string x){
+		int a;
+		try{
+			a = stoi(x);
 		}
-		else{
+		catch(...){
+			cout<<"Incorrect Input. Please input a number"<<endl;	
+			return;		
+		}
+		if(front==-1 && rear==-1){
+			front++;
+			rear++;
+			arr[front]=a;
 			return;
 		}
+			
+		if (rear==n-1){
+			cout<<"Queue is full"<<endl;
+			return;
+		}
+			
+		rear++;
+		arr[rear]=a;
 		
 	}
 	
@@ -101,6 +100,7 @@ class queue{
 int main(){
 	queue q;
 	string c;
+	string m;
 	
 	do{
 		cout<<"Enter the option:"<<endl;
@@ -115,11 +115,10 @@ int main(){
 		
 		cin>>c;
 		
-		if(ascii (c)){
-			switch(asciii(c)){
+		if(ascii (c[0])){
+			switch(asciii(c[0])){
 				case 49: 
 					cout<<"Enter the number:"<<endl;
-					int m;
 					cin>>m;
 					q.enqueue(m);
 					break;
@@ -150,10 +149,7 @@ int main(){
 		}
 		else{
 			cout<<"Incorrect Input"<<endl;
-			if(ascii(c)==false){
-				
-			}
 		}
-	}while(48<asciii(c)!=55);
+	}while(48<asciii(c[0])!=55);
 	return 0;
 }
