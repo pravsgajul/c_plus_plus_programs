@@ -51,11 +51,11 @@ class stack{
 
 int main(){
 	stack st;
-	st.push(1);
-	st.push(2);
-	cout<<st.peak();
-	cout<<st.empty();
-	st.pop();
-	cout<<st.peak();
-	
+	int m;
+	char a;
+		case 1:
+			cout<<"Enter the number to be pushed";
+			cin>>a;
+			st.push(a);
+	}
 }
