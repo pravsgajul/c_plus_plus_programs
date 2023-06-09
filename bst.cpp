@@ -24,7 +24,7 @@ void insertintoTree(node* &root,int pval,int newval){
 		i=root;
 	}
 	else{
-		while(i->value!=pval)
+		while(i->lchild!=pval)
 	}	
 }
 
@@ -34,9 +34,14 @@ void displaytreebfs(node* root){
 
 void displaytreedfs(node* root){
 	node* i=root;
+	
+	while(i->left!=NULL){
+		cout<<i->data;
+		i=i->left;
+	}
 }
 int main(){
 	node* root=NULL;
-	void
+	void insertintoTree
 	
 }
