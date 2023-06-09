@@ -8,21 +8,37 @@ class node{
 		
 	node(int val){
 		data=val;
-		next=this;//'this' is  a pointer
+		//next=this;//'this' is  a pointer
 	}
 };
 
 void insertatHead(node* &head,int val){
 	node* n= new node(val);
 	node* i=head;
-	node* j= head;
-	
+	node* j=head;
+	//cout<<"HEAD";
 	if(head==NULL){
 		head=n;
 		cout<<"head" <<head->data;
+		i=head;
+		j=head;
+		n -> next = head;
 	}
-	cout<<j->data;
-	/*while(j->next!=i){
+	
+	//cout << j->next << endl;
+	//cout << i->next << endl;
+	
+	else{
+		n->next=head;
+		head=n;
+		while(j->next!=i){
+			j=j->next;
+			//cout<<n->data;
+			return;
+		}
+	}
+	
+	/*while(j->next!=i->next){
 		cout<<"inside loop";
 		j=j->next;
 		n->next=i;
