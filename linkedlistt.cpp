@@ -95,6 +95,6 @@ int main(){
 	insertinbetween(head,34,23,56);
 	displaylist(head);
 	deletenode(head,56);
-	exchangenodes(head,34,78);
+	//exchangenodes(head,34,78);
 	displaylist(head);
 }
