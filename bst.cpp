@@ -24,8 +24,23 @@ void insertintoTree(node* &root,int pval,int newval){
 		i=root;
 	}
 	else{
-		while(i->lchild!=pval)
-	}	
+		while(i->data!=pval){
+			try{
+				if(i->lchild!=NULL){
+					i=i->lchild;
+				}
+				else if(i->rchild!=NULL){
+					i=i->rchild;
+				}
+			}
+			catch(...){
+				cout<<"Exception";
+				return; 
+			}
+		}
+		n->parent=i;
+	}
+	cout<<i->data;
 }
 
 void displaytreebfs(node* root){
@@ -35,13 +50,15 @@ void displaytreebfs(node* root){
 void displaytreedfs(node* root){
 	node* i=root;
 	
-	while(i->left!=NULL){
+	while(i->lchild!=NULL){
 		cout<<i->data;
-		i=i->left;
+		i=i->lchild;
 	}
 }
 int main(){
 	node* root=NULL;
-	void insertintoTree
-	
+	insertintoTree(root,NULL,12);
+	insertintoTree(root,12,34);
+	insertintoTree(root,12,45);
+	insertintoTree(root,12,33);
 }
