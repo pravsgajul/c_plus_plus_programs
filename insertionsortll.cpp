@@ -19,6 +19,7 @@ class node{
 };
 
 int main(){
+	int n;
 	cout<<"Enter the size of the array:"<<endl;
 	cin>>n;
 	int arr[n];
